@@ -124,12 +124,46 @@ export default function Home() {
               Contact
             </a>
           </nav>
-          <a
-            href="#contact"
-            className="rounded-full bg-accentDark px-5 py-3 text-sm font-medium text-white transition hover:bg-accent"
-          >
-            Get in Touch
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="#contact"
+              className="hidden rounded-full bg-accentDark px-5 py-3 text-sm font-medium text-white transition hover:bg-accent md:inline-flex"
+            >
+              Get in Touch
+            </a>
+            <details className="group relative md:hidden">
+              <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-line bg-paper/80 text-ink marker:content-none">
+                <span className="sr-only">Open menu</span>
+                <span className="flex w-[18px] flex-col gap-1.5">
+                  <span className="h-px w-full bg-current transition group-open:translate-y-[7px] group-open:rotate-45" />
+                  <span className="h-px w-full bg-current transition group-open:opacity-0" />
+                  <span className="h-px w-full bg-current transition group-open:-translate-y-[7px] group-open:-rotate-45" />
+                </span>
+              </summary>
+              <div className="absolute right-0 top-[calc(100%+0.75rem)] w-64 rounded-[1.4rem] border border-line bg-paper/95 p-3 shadow-card backdrop-blur">
+                <nav className="flex flex-col text-sm text-ink">
+                  <a href="#services" className="rounded-xl px-4 py-3 transition hover:bg-paperAlt">
+                    Services
+                  </a>
+                  <a
+                    href="#who-we-work-with"
+                    className="rounded-xl px-4 py-3 transition hover:bg-paperAlt"
+                  >
+                    Who We Work With
+                  </a>
+                  <a href="#contact" className="rounded-xl px-4 py-3 transition hover:bg-paperAlt">
+                    Contact
+                  </a>
+                  <a
+                    href="#contact"
+                    className="mt-2 rounded-xl bg-accentDark px-4 py-3 text-center font-medium text-white transition hover:bg-accent"
+                  >
+                    Get in Touch
+                  </a>
+                </nav>
+              </div>
+            </details>
+          </div>
         </div>
       </header>
 
