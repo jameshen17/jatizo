@@ -209,15 +209,22 @@ export default function Home() {
           <div className="mt-10 grid gap-5 border-t border-line/80 pt-6 sm:grid-cols-3">
             <div>
               <p className="text-xs uppercase tracking-[0.22em] text-stone">Positioning</p>
-              <p className="mt-3 text-sm leading-6 text-ink">Boutique operational support for apparel teams entering or testing the U.S. market.</p>
+              <p className="mt-3 text-sm leading-6 text-ink">
+                Boutique operational support for apparel teams entering or testing the U.S.
+                market.
+              </p>
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.22em] text-stone">Workflow</p>
-              <p className="mt-3 text-sm leading-6 text-ink">Product development, sourcing coordination, and small-batch execution planning.</p>
+              <p className="mt-3 text-sm leading-6 text-ink">
+                Product development, sourcing coordination, and small-batch execution planning.
+              </p>
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.22em] text-stone">Approach</p>
-              <p className="mt-3 text-sm leading-6 text-ink">Calm communication, realistic timelines, and flexible cross-border coordination.</p>
+              <p className="mt-3 text-sm leading-6 text-ink">
+                Calm communication, realistic timelines, and flexible cross-border coordination.
+              </p>
             </div>
           </div>
         </div>
@@ -290,7 +297,7 @@ export default function Home() {
         <div className="grid gap-10 lg:grid-cols-[0.34fr_0.66fr] lg:items-start">
           <SectionHeading
             title="Services"
-            intro="We focus on practical support across product, sourcing, and execution."
+            intro="We focus on practical support across product development, sourcing, and execution."
           />
           <div className="grid gap-6 lg:grid-cols-2">
           {services.map((service, index) => (
@@ -307,13 +314,15 @@ export default function Home() {
           <div className="rounded-[1.4rem] border border-accent/30 bg-[linear-gradient(135deg,rgba(255,63,112,0.16),rgba(122,44,255,0.12))] p-6 shadow-card">
             <p className="text-xs uppercase tracking-[0.24em] text-white/70">Illustrative case</p>
             <p className="mt-3 text-lg font-medium leading-8 text-ink">
-              Helped one early-stage activewear brand move from design to a small-batch launch in 45 days.
+              Supported an early-stage activewear brand from product development through a
+              small-batch launch within a 45-day timeline.
             </p>
           </div>
           <div className="rounded-[1.4rem] border border-line/80 bg-paper/95 p-6 shadow-card">
-            <p className="text-xs uppercase tracking-[0.24em] text-stone">Development details</p>
+            <p className="text-xs uppercase tracking-[0.24em] text-stone">Typical support</p>
             <p className="mt-3 text-base leading-7 text-ink">
-              Sample comments, measurement checks, trim notes, and fit adjustments are handled with attention to U.S. market expectations and launch timing.
+              Typical support included sample comments, measurement checks, trim notes, fit
+              adjustments, and production coordination aligned with launch timing.
             </p>
           </div>
         </div>
@@ -340,7 +349,7 @@ export default function Home() {
         <div className="grid gap-10 lg:grid-cols-[0.34fr_0.66fr] lg:items-start">
           <SectionHeading
             title="Why JATIZO"
-            intro="We aim to bring together product thinking, sourcing coordination, and practical execution."
+            intro="We bring together product thinking, sourcing coordination, and practical execution."
           />
           <div className="grid gap-6 md:grid-cols-2">
           {reasons.map((reason) => (
@@ -362,6 +371,10 @@ export default function Home() {
             If you&apos;re developing apparel products for the U.S. market or need sourcing and
             execution support, we&apos;d be happy to hear from you.
           </p>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-white/72">
+            We welcome inquiries from emerging brands, boutique sellers, and founders exploring
+            product opportunities.
+          </p>
           <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
             <a
               href="mailto:jatizo.fashion@gmail.com"
@@ -373,7 +386,7 @@ export default function Home() {
               href="mailto:jatizo.fashion@gmail.com"
               className="text-base text-white/80 underline decoration-white/30 underline-offset-4 transition hover:text-white"
             >
-              jatizo.fashion@gmail.com
+              Email: jatizo.fashion@gmail.com
             </a>
           </div>
           </div>
@@ -385,7 +398,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 lg:grid-cols-[1fr_auto] lg:px-10">
           <div className="max-w-2xl">
             <p className="text-lg font-semibold uppercase tracking-[0.22em] text-ink sm:text-xl">
-              JATIZO
+              JATIZO LLC
             </p>
             <p className="mt-5 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
               Cross-border apparel development and supply chain support
