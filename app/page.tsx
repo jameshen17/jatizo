@@ -102,37 +102,44 @@ function Card({
 
 export default function Home() {
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative overflow-x-hidden">
       <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_top,_rgba(255,63,112,0.28),_transparent_56%)]" />
       <div className="absolute left-[-8rem] top-20 -z-10 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
       <div className="absolute right-[-6rem] top-[26rem] -z-10 h-80 w-80 rounded-full bg-[#6e44ff]/20 blur-3xl" />
       <div className="absolute inset-x-0 top-[40rem] -z-10 h-[24rem] bg-[linear-gradient(180deg,transparent_0%,rgba(255,255,255,0.02)_32%,transparent_100%)]" />
 
-      <header className="sticky top-0 z-20 border-b border-line/80 bg-canvas/80 backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-30 border-b border-white/10 bg-black">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-          <a href="#top" className="text-lg font-semibold tracking-[0.22em] text-ink sm:text-xl">
-            JATIZO
+          <a href="#top" className="flex items-center" aria-label="JATIZO home">
+            <Image
+              src="/logo-current.png"
+              alt="JATIZO"
+              width={420}
+              height={126}
+              className="h-11 w-auto sm:h-14"
+              priority
+            />
           </a>
-          <nav className="hidden items-center gap-8 text-sm text-stone md:flex">
-            <a href="#services" className="transition hover:text-ink">
+          <nav className="hidden items-center gap-8 text-sm text-white/72 md:flex">
+            <a href="#services" className="transition hover:text-white">
               Services
             </a>
-            <a href="#who-we-work-with" className="transition hover:text-ink">
+            <a href="#who-we-work-with" className="transition hover:text-white">
               Who We Work With
             </a>
-            <a href="#contact" className="transition hover:text-ink">
+            <a href="#contact" className="transition hover:text-white">
               Contact
             </a>
           </nav>
           <div className="flex items-center gap-3">
             <a
               href="#contact"
-              className="hidden rounded-full bg-accentDark px-5 py-3 text-sm font-medium text-white transition hover:bg-accent md:inline-flex"
+              className="hidden rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-white/90 md:inline-flex"
             >
               Get in Touch
             </a>
             <details className="group relative md:hidden">
-              <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-line bg-paper/80 text-ink marker:content-none">
+              <summary className="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-white/20 bg-white/5 text-white marker:content-none">
                 <span className="sr-only">Open menu</span>
                 <span className="flex w-[18px] flex-col gap-1.5">
                   <span className="h-px w-full bg-current transition group-open:translate-y-[7px] group-open:rotate-45" />
@@ -140,23 +147,23 @@ export default function Home() {
                   <span className="h-px w-full bg-current transition group-open:-translate-y-[7px] group-open:-rotate-45" />
                 </span>
               </summary>
-              <div className="absolute right-0 top-[calc(100%+0.75rem)] w-64 rounded-[1.4rem] border border-line bg-paper/95 p-3 shadow-card backdrop-blur">
+              <div className="absolute right-0 top-[calc(100%+0.75rem)] w-64 rounded-[1.4rem] border border-white/10 bg-[#111111] p-3 shadow-card backdrop-blur">
                 <nav className="flex flex-col text-sm text-ink">
-                  <a href="#services" className="rounded-xl px-4 py-3 transition hover:bg-paperAlt">
+                  <a href="#services" className="rounded-xl px-4 py-3 text-white transition hover:bg-white/5">
                     Services
                   </a>
                   <a
                     href="#who-we-work-with"
-                    className="rounded-xl px-4 py-3 transition hover:bg-paperAlt"
+                    className="rounded-xl px-4 py-3 text-white transition hover:bg-white/5"
                   >
                     Who We Work With
                   </a>
-                  <a href="#contact" className="rounded-xl px-4 py-3 transition hover:bg-paperAlt">
+                  <a href="#contact" className="rounded-xl px-4 py-3 text-white transition hover:bg-white/5">
                     Contact
                   </a>
                   <a
                     href="#contact"
-                    className="mt-2 rounded-xl bg-accentDark px-4 py-3 text-center font-medium text-white transition hover:bg-accent"
+                    className="mt-2 rounded-xl bg-white px-4 py-3 text-center font-medium text-black transition hover:bg-white/90"
                   >
                     Get in Touch
                   </a>
@@ -169,7 +176,7 @@ export default function Home() {
 
       <section
         id="top"
-        className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-10 px-6 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-18"
+        className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-10 px-6 pb-14 pt-32 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pb-18 lg:pt-36"
       >
         <div className="max-w-3xl lg:pr-10">
           <div className="flex items-center gap-4">
