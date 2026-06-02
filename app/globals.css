@@ -37,3 +37,13 @@ body::before {
   background: rgba(255, 63, 112, 0.4);
   color: #fff6fa;
 }
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
