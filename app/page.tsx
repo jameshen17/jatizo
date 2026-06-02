@@ -12,24 +12,32 @@ import {
 import { InfoCard } from "./_components/info-card";
 import { SectionHeading } from "./_components/section-heading";
 
-function StyleTile({ image }: { image: SiteImage }) {
+function StyleTile({ image, compact = false }: { image: SiteImage; compact?: boolean }) {
+  const sizes = compact
+    ? "(max-width: 768px) 84vw, (max-width: 1200px) 42vw, 22vw"
+    : "(max-width: 768px) 72vw, (max-width: 1200px) 34vw, 24vw";
+
+  const aspectClass = compact ? "aspect-[4/5]" : "aspect-[4/5] sm:aspect-[5/6]";
+
   return (
     <article
-      className={`group relative overflow-hidden rounded-[1.8rem] border border-line/80 bg-paper/95 shadow-card ${image.className ?? ""}`.trim()}
+      className={`group relative w-full overflow-hidden rounded-[1.15rem] border border-line/80 bg-paper/95 shadow-card ${image.className ?? ""}`.trim()}
     >
-      <div className="relative h-[22rem] md:h-full">
+      <div className={`relative w-full ${aspectClass}`}>
         <Image
           src={image.src}
           alt={image.alt}
           fill
-          sizes="(max-width: 768px) 72vw, (max-width: 1200px) 33vw, 24vw"
+          sizes={sizes}
           className="object-cover transition duration-500 group-hover:scale-[1.03]"
           style={{ objectPosition: image.objectPosition }}
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.05),rgba(7,5,10,0.72))]" />
-        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-white/70">{image.label}</p>
-          <h3 className="mt-2 text-xl font-medium tracking-tight text-white">{image.title}</h3>
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.03),rgba(7,5,10,0.72))]" />
+        <div className="absolute inset-x-0 bottom-0 p-2.5 sm:p-3">
+          <p className="text-[9px] uppercase tracking-[0.16em] text-white/62">{image.label}</p>
+          <h3 className="mt-1 text-[15px] font-medium tracking-tight text-white sm:text-base">
+            {image.title}
+          </h3>
         </div>
       </div>
     </article>
@@ -74,17 +82,23 @@ function SampleCategoryBlock({
   const isMultiImage = images.length > 1;
 
   return (
-    <article className="rounded-[1.9rem] border border-line/80 bg-paper/95 p-6 shadow-card sm:p-8">
-      <div className="flex flex-col gap-3 sm:max-w-xl">
-        <p className="text-xs uppercase tracking-[0.22em] text-stone">Sample category</p>
-        <h3 className="text-3xl font-semibold tracking-tight text-ink">{title}</h3>
-        <p className="text-base leading-7 text-stone">{intro}</p>
-      </div>
+    <article className="h-full rounded-[1.25rem] border border-line/80 bg-paper/95 p-4 shadow-card sm:p-5">
+      <div className="grid gap-4 lg:grid-cols-[11rem_minmax(0,1fr)] lg:items-start">
+        <div className="flex flex-col gap-2 lg:pt-0.5">
+          <p className="text-[9px] uppercase tracking-[0.18em] text-stone">Sample category</p>
+          <h3 className="text-[1.5rem] font-semibold tracking-tight text-ink sm:text-[1.65rem]">{title}</h3>
+          <p className="max-w-sm text-[14px] leading-6 text-stone">{intro}</p>
+        </div>
 
-      <div className={`mt-6 grid gap-4 ${isMultiImage ? "sm:grid-cols-2 xl:grid-cols-4" : "sm:max-w-[22rem]"}`}>
-        {images.map((image) => (
-          <StyleTile key={image.src} image={image} />
-        ))}
+        <div
+          className={`grid items-start gap-2.5 ${
+            isMultiImage ? "grid-cols-2" : "grid-cols-1"
+          }`}
+        >
+          {images.map((image) => (
+            <StyleTile key={image.src} image={image} compact />
+          ))}
+        </div>
       </div>
     </article>
   );
@@ -269,15 +283,15 @@ Woven sample development and production support for retail-facing teams.
         </div>
       </section>
 
-      <section id="styles" className="mx-auto max-w-7xl px-6 py-[4.5rem] lg:px-10 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-[0.34fr_0.66fr] lg:items-end">
+      <section id="styles" className="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-14">
+        <div className="grid gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:items-end">
           <SectionHeading
             title="Sample proof by category"
             intro="The homepage now separates sample proof into shirts, trousers, tailoring, and coordinated looks so capability is read through garments first and immediately."
           />
-          <div className="rounded-[1.6rem] border border-accent/20 bg-paperAlt/80 p-7 shadow-card">
-            <p className="text-sm uppercase tracking-[0.22em] text-stone">Why this leads</p>
-            <p className="mt-4 text-lg leading-8 text-ink">
+          <div className="rounded-[1.2rem] border border-accent/20 bg-paperAlt/80 p-5 shadow-card">
+            <p className="text-[11px] uppercase tracking-[0.2em] text-stone">Why this leads</p>
+            <p className="mt-3 text-[15px] leading-7 text-ink">
               Sample garments should do most of the persuasive work on the homepage. The mix here
               shows silhouette control, print handling, and retail-facing balance before the user
               ever reaches factory proof.
@@ -285,7 +299,7 @@ Woven sample development and production support for retail-facing teams.
           </div>
         </div>
 
-        <div className="mt-10 space-y-6">
+        <div className="mt-5 grid gap-3 xl:grid-cols-2 xl:items-start">
           {sampleCategories.map((category) => (
             <SampleCategoryBlock
               key={category.title}
