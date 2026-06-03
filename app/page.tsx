@@ -32,6 +32,9 @@ function StyleTile({ image, compact = false }: { image: SiteImage; compact?: boo
           className="object-cover transition duration-500 group-hover:scale-[1.03]"
           style={{ objectPosition: image.objectPosition }}
         />
+        {image.focalIntent === "garment" ? (
+          <div className="absolute inset-x-0 top-0 h-[18%] bg-[linear-gradient(180deg,rgba(247,242,246,0.9),rgba(247,242,246,0.46)_42%,transparent_100%)]" />
+        ) : null}
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.03),rgba(7,5,10,0.72))]" />
         <div className="absolute inset-x-0 bottom-0 p-2.5 sm:p-3">
           <p className="text-[9px] uppercase tracking-[0.16em] text-white/62">{image.label}</p>
@@ -196,9 +199,9 @@ export default function Home() {
 Woven sample development and production support for retail-facing teams.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-stone sm:text-xl">
-            JATIZO leads with sample garments as proof of product judgment, using only a
-            small amount of factory imagery to confirm the team can support execution through
-            packing and shipment readiness.
+            JATIZO leads with sample garments as proof of product judgment, while factory imagery
+            helps confirm the team can support execution through cutting, sewing, finishing,
+            packing, and shipment readiness.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
@@ -242,10 +245,10 @@ Woven sample development and production support for retail-facing teams.
               </p>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-stone">Selected support</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-stone">Factory support</p>
               <p className="mt-3 text-sm leading-6 text-ink">
-                Factory and packing images are intentionally limited so they support the sample
-                story instead of dominating it.
+                Factory imagery now shows cutting, sewing, finishing, and packing so execution
+                depth feels visible without overwhelming the garment story.
               </p>
             </div>
           </div>
@@ -264,6 +267,7 @@ Woven sample development and production support for retail-facing teams.
                 style={{ objectPosition: heroImage.objectPosition }}
                 priority
               />
+              <div className="absolute inset-x-0 top-0 h-[15%] bg-[linear-gradient(180deg,rgba(247,242,246,0.88),rgba(247,242,246,0.34)_42%,transparent_100%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(7,6,10,0.08),rgba(5,4,8,0.62))]" />
               <div className="absolute inset-x-5 top-5 flex items-center justify-between rounded-full border border-white/15 bg-black/25 px-4 py-3 backdrop-blur">
                 <span className="text-[11px] uppercase tracking-[0.24em] text-white/88">{heroImage.label}</span>
@@ -351,14 +355,14 @@ Woven sample development and production support for retail-facing teams.
         <div className="grid gap-10 lg:grid-cols-[0.34fr_0.66fr] lg:items-end">
           <SectionHeading
             title="Selected factory support"
-            intro="Only a few factory visuals are kept. They exist to confirm execution depth while the sample garments remain the main proof of capability."
+            intro="Factory visuals are now expanded to show cutting, sewing, finishing, and packing capacity while the garments remain the lead proof of product quality."
           />
           <div className="rounded-[1.6rem] border border-line/80 bg-paper/95 p-7 shadow-card">
-            <p className="text-sm uppercase tracking-[0.22em] text-stone">Support role</p>
+            <p className="text-sm uppercase tracking-[0.22em] text-stone">Execution depth</p>
             <p className="mt-4 text-lg leading-8 text-ink">
-              These images are intentionally selective. They reassure the viewer that sample-led
-              product work is backed by real line coordination and shipment readiness, without
-              turning the homepage into a factory tour.
+              These images are still curated, but they now do more work. Together they show that
+              sample-led product development is supported by real factory coordination, controlled
+              floor operations, and shipment readiness.
             </p>
           </div>
         </div>

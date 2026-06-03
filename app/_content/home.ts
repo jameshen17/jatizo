@@ -38,7 +38,7 @@ export type ProofItem = {
 export const capabilityTags = [
   "Woven sample specialist",
   "Retail-ready silhouettes",
-  "Selected factory support",
+  "Factory-backed execution",
   "Recycle / Better Cotton capable"
 ];
 
@@ -50,7 +50,7 @@ export const heroImage: SiteImage = {
   priority: true,
   cropMode: "cover",
   focalIntent: "garment",
-  objectPosition: "center top",
+  objectPosition: "center 24%",
   label: "Sample-led woven capability",
   title: "Sample garments that show product judgment before production begins.",
   note: "The strongest proof on the site should be the garments themselves, with factory support shown only where it adds confidence."
@@ -69,7 +69,7 @@ export const sampleCategories: SampleCategory[] = [
         aspect: "portrait",
         cropMode: "cover",
         focalIntent: "garment",
-        objectPosition: "center top",
+        objectPosition: "center 22%",
         label: "Sample proof · Shirts & blouses",
         title: "Soft blue blouse"
       },
@@ -80,7 +80,7 @@ export const sampleCategories: SampleCategory[] = [
         aspect: "portrait",
         cropMode: "cover",
         focalIntent: "garment",
-        objectPosition: "center top",
+        objectPosition: "center 22%",
         label: "Sample proof · Printed wovens",
         title: "Cream dot blouse"
       },
@@ -91,7 +91,7 @@ export const sampleCategories: SampleCategory[] = [
         aspect: "portrait",
         cropMode: "cover",
         focalIntent: "garment",
-        objectPosition: "center top",
+        objectPosition: "center 22%",
         label: "Sample proof · Shirts & blouses",
         title: "Dusty rose blouse"
       },
@@ -102,7 +102,7 @@ export const sampleCategories: SampleCategory[] = [
         aspect: "portrait",
         cropMode: "cover",
         focalIntent: "garment",
-        objectPosition: "center top",
+        objectPosition: "center 20%",
         label: "Sample proof · Shirts & blouses",
         title: "Ivory sleeveless top"
       }
@@ -120,7 +120,7 @@ export const sampleCategories: SampleCategory[] = [
         aspect: "portrait",
         cropMode: "cover",
         focalIntent: "garment",
-        objectPosition: "center top",
+        objectPosition: "center 20%",
         label: "Sample proof · Trousers",
         title: "Printed trouser"
       }
@@ -138,7 +138,7 @@ export const sampleCategories: SampleCategory[] = [
         aspect: "portrait",
         cropMode: "cover",
         focalIntent: "garment",
-        objectPosition: "center top",
+        objectPosition: "center 20%",
         label: "Sample proof · Tailored pieces",
         title: "Windowpane tailoring"
       }
@@ -185,6 +185,18 @@ export const capabilityCards: CapabilityCard[] = [
 
 export const processSteps: SiteImage[] = [
   {
+    src: "/jatizo/process-cutting-floor.webp",
+    alt: "Large cutting floor prepared for bulk fabric handling and marker execution.",
+    usage: "process",
+    aspect: "landscape",
+    cropMode: "cover",
+    focalIntent: "factory",
+    objectPosition: "center center",
+    label: "Factory capability · Cutting",
+    title: "Cutting floor readiness",
+    note: "A clean cutting floor signals real preparation for fabric handling, marker work, and disciplined production setup."
+  },
+  {
     src: "/jatizo/process-sewing-line.webp",
     alt: "Sewing line with operators assembling garments.",
     usage: "process",
@@ -192,9 +204,21 @@ export const processSteps: SiteImage[] = [
     cropMode: "cover",
     focalIntent: "factory",
     objectPosition: "center center",
-    label: "Selected factory support · Sewing",
+    label: "Factory capability · Sewing",
     title: "Sewing line support",
-    note: "One strong line image is enough to show real execution support behind the sample garments without turning the homepage into a factory gallery."
+    note: "Line visibility helps show that sample-led development is backed by real sewing capacity and organized floor support."
+  },
+  {
+    src: "/jatizo/process-qc-finishing.webp",
+    alt: "Production floor with garments organized in quantity for finishing and workflow control.",
+    usage: "process",
+    aspect: "landscape",
+    cropMode: "cover",
+    focalIntent: "factory",
+    objectPosition: "center center",
+    label: "Factory capability · Floor control",
+    title: "Finishing and floor coordination",
+    note: "Organized floor flow and finishing visibility add confidence that execution extends beyond sampling into practical production management."
   },
   {
     src: "/jatizo/process-packing-boxes.webp",
@@ -204,9 +228,9 @@ export const processSteps: SiteImage[] = [
     cropMode: "cover",
     focalIntent: "packing",
     objectPosition: "center center",
-    label: "Selected factory support · Packing",
+    label: "Factory capability · Packing",
     title: "Packing and shipment readiness",
-    note: "A single packing visual reinforces delivery discipline while keeping the garments themselves as the main capability proof."
+    note: "Packing visuals reinforce shipment discipline, warehouse handling, and the ability to support launch timing with operational follow-through."
   }
 ];
 
