@@ -11,8 +11,10 @@ import {
   type SiteImage
 } from "./_content/home";
 import { MobileNav } from "./_components/mobile-nav";
+import { CopyEmailButton } from "./_components/copy-email-button";
 
-const contactHref = "mailto:hello@jatizo.biz?subject=Production%20Inquiry";
+const contactHref = "#contact";
+const emailHref = "mailto:hello@jatizo.biz?subject=Production%20Inquiry";
 
 function SectionIntro({
   eyebrow,
@@ -265,7 +267,7 @@ export default function Home() {
                 Send us a tech pack, reference sample, or development brief. We can start with a
                 practical conversation around sampling, construction, timing, and production fit.
               </p>
-              <a href={contactHref} className="button-primary mt-8">Talk to Jatizo</a>
+              <a href={emailHref} className="button-primary mt-8">Email Jatizo</a>
             </div>
             <div className="border-t border-line bg-charcoal p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
               <p className="eyebrow">Direct contact</p>
@@ -274,9 +276,12 @@ export default function Home() {
                 <p>Founders, JATIZO LLC</p>
                 <p>California, USA</p>
               </div>
-              <a href={contactHref} className="mt-8 block break-all text-lg text-accentSoft underline decoration-accent/40 underline-offset-4 hover:text-white">
-                hello@jatizo.biz
-              </a>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a href={emailHref} className="break-all text-lg text-accentSoft underline decoration-accent/40 underline-offset-4 hover:text-white">
+                  hello@jatizo.biz
+                </a>
+                <CopyEmailButton />
+              </div>
               <a href="https://jatizo.biz" className="mt-3 block text-white/70 transition hover:text-white">
                 jatizo.biz
               </a>
@@ -289,7 +294,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-stone sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-10">
           <p>JATIZO LLC · Women&apos;s woven development and production</p>
           <div className="flex gap-6">
-            <a href={contactHref} className="transition hover:text-white">hello@jatizo.biz</a>
+            <a href={emailHref} className="transition hover:text-white">hello@jatizo.biz</a>
             <a href="#top" className="transition hover:text-white">Back to top</a>
           </div>
         </div>
