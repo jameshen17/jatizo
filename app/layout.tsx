@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "JATIZO | Woven apparel development and production support",
+  title: "JATIZO | Women’s Woven Development & Production",
   description:
-    "Fashion-led woven apparel development and production support for retail-facing teams, from product direction to shipment readiness."
+    "California-based women’s woven apparel development and production partner, supporting fashion teams from first sample through shipment."
 };
 
 export default function RootLayout({

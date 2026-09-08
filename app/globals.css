@@ -13,10 +13,8 @@ html {
 body {
   font-family: var(--font-inter), sans-serif;
   background:
-    radial-gradient(circle at 18% 12%, rgba(255, 63, 112, 0.24), transparent 24%),
-    radial-gradient(circle at 86% 10%, rgba(255, 180, 197, 0.12), transparent 20%),
-    radial-gradient(circle at 80% 48%, rgba(120, 77, 255, 0.12), transparent 24%),
-    linear-gradient(180deg, #0d0b12 0%, #120d17 44%, #0d0b12 100%);
+    radial-gradient(circle at 18% 8%, rgba(154, 42, 72, 0.14), transparent 27%),
+    linear-gradient(180deg, #0d0b10 0%, #121015 48%, #0d0b10 100%);
   color: #f6f1f7;
 }
 
@@ -28,14 +26,48 @@ body::before {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 88px 88px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 84%);
-  opacity: 0.28;
+  background-size: 112px 112px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.32), transparent 72%);
+  opacity: 0.16;
 }
 
 ::selection {
-  background: rgba(255, 63, 112, 0.4);
+  background: rgba(190, 58, 92, 0.55);
   color: #fff6fa;
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.22em] text-stone;
+  }
+
+  .section-title {
+    @apply text-4xl font-semibold leading-tight tracking-[-0.035em] text-ink sm:text-5xl;
+  }
+
+  .section-copy {
+    @apply max-w-2xl text-lg leading-8 text-stone sm:text-xl;
+  }
+
+  .nav-link {
+    @apply transition hover:text-white focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent;
+  }
+
+  .mobile-nav-link {
+    @apply rounded-xl px-4 py-3 text-sm text-white transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent;
+  }
+
+  .button-primary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-accent px-6 py-3 text-center text-sm font-medium text-white transition hover:bg-accentDark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accentSoft focus-visible:ring-offset-2 focus-visible:ring-offset-canvas;
+  }
+
+  .button-secondary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-line bg-paper px-6 py-3 text-center text-sm font-medium text-ink transition hover:border-accent/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accentSoft focus-visible:ring-offset-2 focus-visible:ring-offset-canvas;
+  }
+
+  .button-light {
+    @apply min-h-11 items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas;
+  }
 }
 
 
