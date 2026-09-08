@@ -32,7 +32,7 @@ export const heroImage: SiteImage = {
   alt: "A coordinated women’s woven look showing drape, print placement, and proportion.",
   label: "Women’s woven development",
   title: "From first sample through shipment",
-  objectPosition: "center 24%"
+  objectPosition: "center 38%"
 };
 
 export const productCategories: ProductCategory[] = [
@@ -59,6 +59,20 @@ export const productCategories: ProductCategory[] = [
 ];
 
 export const sampleImages: SiteImage[] = [
+  {
+    src: "/jatizo/sample-white-ruffle-blouse.jpg",
+    alt: "Model wearing a white textured woven blouse with a softly ruffled neckline and long sleeves.",
+    label: "Blouses & tops",
+    title: "Textured ruffle detail",
+    objectPosition: "center 28%"
+  },
+  {
+    src: "/jatizo/sample-chain-print-blouse.jpg",
+    alt: "Model wearing a black-and-white chain-print woven blouse with a relaxed silhouette.",
+    label: "Printed wovens",
+    title: "All-over print placement",
+    objectPosition: "center 26%"
+  },
   {
     src: "/jatizo/style-soft-blue-blouse.webp",
     alt: "Soft blue woven blouse with fluid drape and minimal hardware.",
@@ -88,25 +102,25 @@ export const sampleImages: SiteImage[] = [
     objectPosition: "center 20%"
   },
   {
-    src: "/jatizo/style-printed-trouser.webp",
+    src: "/jatizo/style-printed-trouser-v2.webp",
     alt: "Printed woven trousers shown in a retail-ready styling shot.",
     label: "Skirts & trousers",
     title: "Printed trouser",
-    objectPosition: "center 20%"
+    objectPosition: "center center"
   },
   {
-    src: "/jatizo/style-windowpane-tailoring.webp",
+    src: "/jatizo/style-windowpane-tailoring-v2.webp",
     alt: "Windowpane tailored woven set in a clean full-look presentation.",
     label: "Light tailoring",
     title: "Balanced structure",
-    objectPosition: "center 20%"
+    objectPosition: "center center"
   },
   {
-    src: "/jatizo/style-gingham-tailoring.webp",
+    src: "/jatizo/style-gingham-tailoring-v2.webp",
     alt: "Gingham tailored woven set balancing structure and wearable proportion.",
     label: "Coordinated sets",
     title: "Assortment thinking",
-    objectPosition: "center top"
+    objectPosition: "center center"
   }
 ];
 
@@ -150,7 +164,7 @@ export const valuePoints: ValuePoint[] = [
   },
   {
     title: "Experienced China manufacturing network",
-    text: "An integrated partner-factory network with extensive women’s apparel production experience."
+    text: "An integrated network of partner factories with extensive women’s apparel production experience."
   },
   {
     title: "Sample-led development",

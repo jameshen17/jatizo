@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${inter.variable} bg-canvas text-ink antialiased`}>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-1HVGEFJHZH" />
     </html>
   );
 }

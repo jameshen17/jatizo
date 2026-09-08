@@ -42,7 +42,7 @@ export function MobileNav({ contactHref }: { contactHref: string }) {
           className="mt-2 rounded-xl bg-white px-4 py-3 text-center text-sm font-medium text-black"
           onClick={closeMenu}
         >
-          Talk to Jatizo
+          Get in Touch
         </a>
       </nav>
     </details>

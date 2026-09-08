@@ -37,6 +37,40 @@ body::before {
 }
 
 @layer components {
+  .wordmark {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.24rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    color: #d5ad54;
+    background: linear-gradient(112deg, #8d6426 0%, #f6dfa0 28%, #c39135 50%, #f8e7ae 72%, #9d6f2a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 16px rgba(213, 173, 84, 0.16));
+  }
+
+  .wordmark::after {
+    content: "";
+    position: absolute;
+    right: 0.15em;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(246, 223, 160, 0.85) 22%, rgba(195, 145, 53, 0.55) 78%, transparent);
+  }
+
+  @media (min-width: 640px) {
+    .wordmark {
+      font-size: 1.85rem;
+      letter-spacing: 0.17em;
+    }
+  }
+
   .eyebrow {
     @apply text-xs font-medium uppercase tracking-[0.22em] text-stone;
   }
